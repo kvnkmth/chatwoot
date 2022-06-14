@@ -13,6 +13,22 @@
   ],
   "success_url": "/",
   "env": {
+    "REDIS_URL":{
+    "description": "Redis server url",
+      "value": "your-redisserver-ip"
+    },
+    "POSTGRES_HOST":{
+    "description": "POstgres server ip",
+      "value": "your-postgres-ip"
+    },
+    "POSTGRES_USERNAME":{
+    "description": "POstgres db user",
+      "value": "your-postgres-user"
+    },
+     "POSTGRES_PASSWORD":{
+    "description": "POstgres server db pass",
+      "value": "your-postgres-pass"
+    },
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
@@ -49,7 +65,7 @@
     }
   },
   "image": "heroku/ruby",
-  "addons": [ "heroku-redis", "heroku-postgresql"],
+  
   "buildpacks": [
     {
       "url": "heroku/ruby"
